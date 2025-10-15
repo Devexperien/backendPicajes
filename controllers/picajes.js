@@ -78,7 +78,7 @@ const { desencriptarDNI } = require('../helpers/aes_desencryter');
  }
 
  ComprobarDni = async(req, res = response ) => {
-    
+    console.log('paso'); 
     
     const apiKey = req.header('x-api-key');  
     
@@ -101,7 +101,7 @@ const { desencriptarDNI } = require('../helpers/aes_desencryter');
      }
 
       try {       
-               
+              
         const dniURI = decodeURIComponent(dni); 
         //const conexionURI = decodeURIComponent('XsgW23XOAIGfN4TjRCPDlZP70D%2BO%2B7ClH%2FyhBsuOKww%3D');
        
@@ -156,7 +156,7 @@ const { desencriptarDNI } = require('../helpers/aes_desencryter');
         }
 
     // Si todo es correcto, devolver el número del empleado
-    
+    console.log(row.Numero);
     return res.json({ resul: row.Numero });
 
       } catch (err) {
@@ -169,6 +169,7 @@ const { desencriptarDNI } = require('../helpers/aes_desencryter');
 
    
    Status = async(req, res = response ) => {
+    console.log('paso'); 
     // const apiKey = req.header('x-api-key');  
     
     // if (apiKey !== process.env.API_KEY) {

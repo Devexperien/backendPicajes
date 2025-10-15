@@ -7,7 +7,7 @@ async function executeQuery(query,conexion) {
     try {
         // Conectar a la base de datos     
    
-        const config = crearConfig('sa', 'pk', conexion, 'BDPicajes');
+        const config = crearConfig('sa', 'Adm1357', conexion, 'BDPicajes');
         pool = await sql.connect(config);     
         
         // Ejecutar la consulta
